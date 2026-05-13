@@ -275,6 +275,47 @@
     .software-item:first-child{border-top:.5px solid var(--border)}
     .software-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);opacity:.6}
 
+    /* EXPERIENCE */
+    .experience-section { position:relative; z-index:5; padding:clamp(4rem,7vw,8rem) 8%; border-top:.5px solid var(--border); }
+    .experience-inner { max-width: 900px; }
+    .experience-header { margin-bottom: 3rem; }
+
+    .timeline { display: flex; flex-direction: column; }
+    .tl-item {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 2rem;
+      padding: 2rem 0;
+      border-top: .5px solid var(--border);
+      position: relative;
+    }
+    .tl-item:last-child { border-bottom: .5px solid var(--border); }
+
+    .tl-date {
+      font-family: var(--font-sub); font-size: 11px; font-weight: 400;
+      letter-spacing: .1em; color: var(--muted);
+      padding-top: .25rem; line-height: 1.6;
+      flex-shrink: 0;
+    }
+    .tl-role {
+      font-family: var(--font-title); font-size: clamp(18px, 2vw, 24px);
+      letter-spacing: .02em; color: var(--text); margin-bottom: .35rem;
+    }
+    .tl-company {
+      font-family: var(--font-sub); font-size: 12px; font-weight: 300;
+      letter-spacing: .08em; color: var(--accent); margin-bottom: .75rem;
+      text-transform: uppercase;
+    }
+    .tl-desc {
+      font-family: var(--font-sub); font-size: 14px; font-weight: 300;
+      line-height: 1.8; color: var(--text-dim);
+    }
+    .tl-desc em { font-style: italic; color: var(--text); }
+
+    @media(max-width: 600px) {
+      .tl-item { grid-template-columns: 1fr; gap: .75rem; }
+    }
+
     /* CONTACT */
     .contact-section{position:relative;z-index:5;border-top:.5px solid var(--border);padding:clamp(4rem,7vw,8rem) 8%;text-align:center}
     .contact-label{font-family:var(--font-sub);font-size:11px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);margin-bottom:1.5rem}
@@ -343,6 +384,7 @@
     <ul class="nav-drawer-links">
       <li><a href="#portfolio" onclick="closeDrawer()">Portfolio</a></li>
       <li><a href="#about" onclick="closeDrawer()">About</a></li>
+      <li><a href="#experience" onclick="closeDrawer()">Experience</a></li>
       <li><a href="#contact" onclick="closeDrawer()">Contact</a></li>
     </ul>
     <div class="nav-drawer-social">
@@ -644,12 +686,94 @@
           <div class="software-item"><span>Blender</span><span class="software-dot"></span></div>
           <div class="software-item"><span>Substance 3D Painter</span><span class="software-dot"></span></div>
           <div class="software-item"><span>Marmoset Toolbag</span><span class="software-dot"></span></div>
-          <div class="software-item"><span>Unreal Engine</span><span class="software-dot"></span></div>
-          <div class="software-item"><span>After Effects</span><span class="software-dot"></span></div>
-          <div class="software-item"><span>Premiere Pro</span><span class="software-dot"></span></div>
           <div class="software-item"><span>Photoshop</span><span class="software-dot"></span></div>
-          <div class="software-item"><span>Fusion Studio</span><span class="software-dot"></span></div>
+          <div class="software-item"><span>Unreal Engine</span><span class="software-dot"></span></div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="experience-section" id="experience">
+    <div class="experience-inner">
+      <div class="experience-header">
+        <div class="portfolio-label">Work History</div>
+        <h2 class="portfolio-title">Experience</h2>
+      </div>
+      <div class="timeline">
+
+        <div class="tl-item">
+          <div class="tl-date">Jul 2022 — Present</div>
+          <div class="tl-body">
+            <div class="tl-role">Freelance 3D Generalist</div>
+            <div class="tl-company">Self-employed · Remote · Buenos Aires, Argentina</div>
+            <div class="tl-desc">Cinematic, layout and environment artist in Unreal Engine. Character and props 3D modeling, texturing, shading and 3D animation. VFX, composition and tracking.</div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-date">Oct 2024 — Nov 2024</div>
+          <div class="tl-body">
+            <div class="tl-role">3D Character Artist</div>
+            <div class="tl-company">Freelance Contract · Remote · Buenos Aires, Argentina</div>
+            <div class="tl-desc">Character, props and hair stylized modeling, in cooperation with the rig and animation team.</div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-date">Feb 2024 — Aug 2024</div>
+          <div class="tl-body">
+            <div class="tl-role">Layout and Environment 3D Artist</div>
+            <div class="tl-company">Mamoncillo Studios · Contract · Remote · Bogotá, Colombia</div>
+            <div class="tl-desc">Layout, lighting and cinematic camera composition, environment creation, animation, rendering and shading in Unreal Engine.</div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-date">Apr 2023 — Aug 2023</div>
+          <div class="tl-body">
+            <div class="tl-role">Environment 3D Artist</div>
+            <div class="tl-company">WAYPOINT — A Creative Production Company · Contract · Remote · Los Angeles, CA</div>
+            <div class="tl-desc">Layout, lighting and cinematic camera composition, environment dressing, 3D modeling and texturing for a cancelled Bandai Namco Gundam project.</div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-date">Aug 2021 — Jan 2024</div>
+          <div class="tl-body">
+            <div class="tl-role">3D Character Animator</div>
+            <div class="tl-company">3 Little Berkana · Buenos Aires, Argentina</div>
+            <div class="tl-desc">3D animation of pets for Lily's Garden mobile game by Tactile Games.</div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-date">Jul 2022 — Jan 2023</div>
+          <div class="tl-body">
+            <div class="tl-role">Visual Effects Artist</div>
+            <div class="tl-company">Malditomaus · Contract · Buenos Aires, Argentina</div>
+            <div class="tl-desc">VFX composition for Disney+ series <em>Entrelazados</em> Season 2.</div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-date">Nov 2019 — Jul 2022</div>
+          <div class="tl-body">
+            <div class="tl-role">Video Editor</div>
+            <div class="tl-company">DOE Production Company · Full-time · Buenos Aires, Argentina</div>
+            <div class="tl-desc">Video editing for digital platforms.</div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-date">Nov 2017 — Nov 2019</div>
+          <div class="tl-body">
+            <div class="tl-role">Junior Designer</div>
+            <div class="tl-company">Adverit · Part-time · San Isidro, Argentina</div>
+            <div class="tl-desc">2D animation for social media.</div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
